@@ -23,4 +23,6 @@ Examples (input -> output)
                 function repeatStr (n, s) {
                 return s.repeat(n);
                 }
+                    CodeWars Solution(2)
+                const alternate = (n, a, b) => n ? [a, ...alternate(n-1, b, a)] : [];
 */
