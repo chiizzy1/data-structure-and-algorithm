@@ -44,4 +44,32 @@ Instructions: Write a function that when given a URL as a string, parses out jus
                           return url.replace(/(https?:\/\/)?(www\.)?/, '').split('.')[0]
                         }
 
-*/
+*/ 
+
+
+// function dirReduc(arr){
+  
+//     let road = arr
+//       let check = []
+//       let n = road.filter( (item) =>  item ==='NORTH')
+//       let s = road.filter( (item) =>  item ==='SOUTH')
+//       let e = road.filter( (item) =>  item ==='EAST')
+//       let w = road.filter( (item) =>  item ==='WEST')
+  
+//       let uniqueEW 
+//       let uniqueNS
+//       for (let i = 0; i < road.length; i++){
+//           if (road[i - 1] !== 'SOUTH' && road[i] === 'NORTH' && road[i + 1] !== 'SOUTH'){ uniqueNS = true }
+//           if (road[i - 1] !== 'WEST' && road[i] === 'EAST' && road[i + 1] !== 'WEST'){ uniqueEW = true }
+//       }
+  
+//       if( uniqueEW && uniqueNS ){ return arr }
+//       else{
+//           if (n.length === s.length){ road = road.filter(path => path !== 'NORTH' && path !== 'SOUTH') }
+//           if (e.length === w.length){ road = road.filter(path => path !== 'EAST' && path !== 'WEST') }
+          
+//           road.map(item => check.push( road.filter( (a) =>  item === a ).length  ))
+  
+//           return road.length > 1 ? [road[Math.max(...check)]] : road
+//       }
+//   }
