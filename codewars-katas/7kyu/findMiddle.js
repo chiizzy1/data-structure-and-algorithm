@@ -27,3 +27,19 @@ gimme([2, 3, 1]) => 0
                             };
                             
 */
+
+
+function compareVersions (version1, version2) {
+
+    let a = version1.split('.')
+    let b = version2.split('.')
+
+    if ( a.length > b.length){ return a[b.length - 1] >= b[b.length - 1]  }
+    if ( a.length < b.length){ return a[a.length - 1] >= b[a.length - 1]  }
+    else{
+        return a.every((num, index) => parseFloat(num) >= parseFloat(b[index]) )
+    }
+}
+  
+  parseFloat(version1) >= parseFloat(version2);
+  compareVersions ("10.9", "10.10");  
