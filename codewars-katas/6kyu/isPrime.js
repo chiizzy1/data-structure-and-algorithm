@@ -18,15 +18,33 @@ is_prime(-1) /* false
                                     MY Solution
                                     
                 function isPrime(num) {
-                    let count = 0
-                    for (let i = 1; i <= num; i++){
-                        if (num % i === 0 ){ count += 1 }
+                    if (num === 1){ return false }
+                    else{
+                        let count = 0
+                        for (let i = 1; i <= Math.sqrt(num); i++){
+                            if (num % i === 0 ){ count += 1 }
+                        }
+                        return count === 1 ? true : false
                     }
-                    return count === 2 ? true : false
                 }
 
                                     CodeWars Solution(1)
             
-                    
+                    const isPrime = num => {
+                        for (let i = 2; i <= num ** .5; i++) {
+                            if (!(num % i)) return false;
+                        }
+                        return num > 1;
+                        }
+
+                        CodeWars Solution(2)
+
+                    function isPrime(num) {
+                        if (num<=1) return false;//by definition
+                        for(i=2;i<Math.floor(num/2+1);i++){//No point in checking integers above 1/2 the input.
+                            if (num%i===0) return false;
+                        }
+                        return true;
+                    }
                             
 */
