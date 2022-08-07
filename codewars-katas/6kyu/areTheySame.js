@@ -29,11 +29,21 @@ b = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]
                     return true
                 }                  
 
-                                    CodeWar Solution
+                                    CodeWar Solution(1)
 
         function comp(a, b) {
             if (!a || !b || a.length !== b.length) return false;
             return a.map(x => x * x).sort().toString() === b.sort().toString();
         }
+
+                                    CodeWar Solution(2)
                 
+                function comp(array1, array2){
+                    try{
+                        var sortArray2=array2.map(Math.sqrt).sort();
+                        return JSON.stringify(array1.sort())===JSON.stringify(sortArray2);
+                    }catch(e){
+                        return false;
+                    }
+                }
 */
