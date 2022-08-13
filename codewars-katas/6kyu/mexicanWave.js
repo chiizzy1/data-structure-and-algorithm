@@ -20,17 +20,17 @@ Instructions:
 
                                        CodeWars Solution(s)
                
-              function wave(str){
-                    let newArr = [];
-                    for (let i = 0; i < str.length; i++) {
-                        let copy = str.split('');
-                        if(copy[i] !== ' ') {
-                        copy[i] = copy[i].toUpperCase()
-                        newArr.push(copy.join(''))
+                function wave(str){
+                        let arr = [];
+                        for (let i = 0; i < str.length; i++) {
+                            if( str[i] !== ' ') {
+                                let a = str[i]
+                                let b = a.toUpperCase()
+                                arr.push(str.replace(a, b))
+                            }
                         }
-                    }
-                    return newArr
-                    }
+                    return arr
+                }
 
                         CodeWars Solution(2)
                     const wave = str => 
