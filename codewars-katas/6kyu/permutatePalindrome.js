@@ -82,7 +82,7 @@ function permuteAPalindrome(str){
     let obj = {}
     let ans = 0
 
-    // Loop through each letter in str, get the keys and values ans insert them into obj
+    // Loop through each letter in str and insert them into obj
 
     for (let i = 0; i < str.length; i++){
         let char = str[i]
@@ -90,7 +90,7 @@ function permuteAPalindrome(str){
     }
 
     // In a palindrome max number of letter with odd values is one 
-    // Loop through obj, get the value of each key in the object
+    // Loop through obj, get the value of each key (letter) in the object
     // Increment the count of ans, whenever a key has an odd value
 
     for (const letters in obj) {
