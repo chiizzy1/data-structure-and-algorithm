@@ -32,6 +32,21 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].
                             return ans
                      }
 
+
+                            My Optimized Solution
+
+                    function deleteNth(arr,n){
+                        let obj = {}
+                        
+                        return arr.filter( num => {
+                            obj[num] = obj[num] + 1 || 1
+                            return obj[num] <= n
+                        })
+                        
+                    }
+
+
+
                                     CodeWar Solution
                 function deleteNth(arr,x){
                     var obj = {}
