@@ -5,24 +5,25 @@ Instructions:
 
                                     MY Solution
                         
-                    var twoSum = function(nums, target) {
-                        let ans = []
-                        
-                        nums.map((num, index) => {
-                            nums.map((a, b) => {
-                                if (index !== b){
-                                    if (num + a === target){
-                                        ans.push(index)
-                                        ans.push(b)
-                                    }
+                   var twoSum = function(nums, target) {
+    
+                        //  loop through the array
+                            let obj = {}
+                            
+                            for (let i = 0; i < nums.length; i++){
+                                let num = nums[i];
+                                let remainder = target - num;
+                                
+                                if (num in obj){
+                                    return [i, obj[num]]
+                                }else{
+                                    obj[remainder] = i
                                 }
-                            })
-                        })
-                        
-                        return ans.slice(0, 2)
-                        
-                    };
-
+                                
+                                
+                            }
+                            
+                     };
 
                                  leetCode Solution(1)
                             
