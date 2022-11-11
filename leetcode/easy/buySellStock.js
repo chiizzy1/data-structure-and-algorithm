@@ -25,11 +25,11 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
                     let profit = 0;
                     
                     for (let i = 1; i <  prices.length; i++){
-                    if (prices[i] < buy){
-                        buy = prices[i]
-                    }else{
-                        profit = Math.max(profit, prices[i] - buy)
-                    }
+                        if (prices[i] < buy){
+                            buy = prices[i]
+                        }else{
+                            profit = Math.max(profit, prices[i] - buy)
+                        }
                     }
                     
                     return profit
