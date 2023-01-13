@@ -7,7 +7,7 @@ Instructions:
                         
                    var twoSum = function(nums, target) {
     
-                        //  loop through the array
+                        //  loop through the nums array
                             let obj = {}
                             
                             for (let i = 0; i < nums.length; i++){
