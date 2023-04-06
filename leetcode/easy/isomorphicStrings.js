@@ -43,27 +43,23 @@ Output: true
                 return convertString(s) === convertString(t);
             };                  
              
-                        CodeWars Solution 1
+                      Optimized & Faster Solution 1
           
-        const createStringCode = (s) => {
-            let map = new Map();
-            let id = 0;
-            let str = '';
-            for (let i = 0; i < s.length; i++) {
-                if (!map.has(s[i])) {
-                    map.set(s[i], id);
-                    str = str + id + '.';
-                    id += 1;
-                } else {
-                    const key = map.get(s[i]);
-                    str = str + key + '.';
-                }
-            }
-            return str;
-        }
+            var isIsomorphic = function(s, t) {
+    
+                if (s.length !== t.length) return false;
 
-        const isIsomorphic = (s, t) => {
-            return createStringCode(s) === createStringCode(t);
-        };
+                let mapS = new Map();
+                let mapT = new Map();
+
+                for (let i = 0; i < s.length; i++){
+                    if (mapS.get(s[i]) !== mapT.get(t[i])) return false;
+
+                    mapS.set(s[i], i);
+                    mapT.set(t[i], i)
+                }
+
+                return true
+            };
                                 
 */
